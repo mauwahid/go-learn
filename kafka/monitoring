@@ -1,0 +1,1 @@
+docker run -it -p 9000:9000 -e KAFKA_BROKERCONNECT=b1-kafka.linkaja.dev:9092,b2-kafka.linkaja.dev:9092 obsidiandynamics/kafdrop
