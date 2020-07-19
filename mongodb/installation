@@ -1,0 +1,16 @@
+#pull image from docker hub
+docker pull mongo
+
+#create directory for saving mongo data
+mkdir mongodata
+
+#run mongo db with mongodata as volume
+docker run -it -v /data/db:/mongodata -p 27017:27017 --name mongodb -d mongo
+
+#check log
+sudo docker logs mongodb
+
+#running mongo bash shell
+sudo docker exec -it mongodb bash
+#then
+mongo -host localhost -port 27017

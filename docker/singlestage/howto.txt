@@ -1,0 +1,25 @@
+#Create golang project
+
+#Create dockerfile
+Dockerfile, cheat sheets https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+
+#Sample 01
+FROM golang:alpine
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN go build -o server server.go
+CMD ["/app/server"]
+
+#Sample 02
+FROM golang:alpine
+COPY . .
+RUN go build -o server server.go
+CMD ["./server"]
+
+
+#Build
+docker build -t go-singlestage .
+
+#Run
+docker run -p 8080:8080 --name go-single -d go-singlestage
