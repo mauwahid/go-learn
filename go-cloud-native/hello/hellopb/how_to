@@ -1,0 +1,3 @@
+generate protoc : 
+-> protoc --go_out=plugins=grpc:. hellopb/hello.proto
+

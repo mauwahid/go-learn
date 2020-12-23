@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wallet;
+
+service AccountService {
+    rpc addAccount(Account) returns (AccountID);
+    rpc getAccount(AccountID) returns (Account);
+}
+
+message Account {
+    string id = 1;
+    string name = 2;
+    string phoneNum = 3;
+    uint32 gender = 4;
+}
+
+message AccountID {
+    string value = 1;
+}
