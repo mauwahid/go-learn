@@ -1,2 +1,2 @@
 create proto file in proto/xxx.proto
-generate protoc
+generate protoc -> protoc --go_out=plugins=grpc:. hellopb/hello.proto

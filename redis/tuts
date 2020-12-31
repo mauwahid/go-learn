@@ -1,0 +1,5 @@
+
+#run redis
+docker run --name my-redis -d redis
+#connect with cli
+docker run -it --name my-redis-cli --link my-redis:redis --rm redis redis-cli -h redis -p 6379
