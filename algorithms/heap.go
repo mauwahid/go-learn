@@ -14,7 +14,7 @@ func (iheap *IntegerHeap) Push(heapintf interface{}) {
 
 func (iheap *IntegerHeap) Pop() interface{} {
 	var n int
-	var x1 int
+	var x1 int	
 
 	var previous IntegerHeap = *iheap
 	n = len(previous)

@@ -1,0 +1,13 @@
+kubectl create deployment mynginx --image=nginx:1.15-alpine
+
+kubectl get deploy,rs,po -l app=mynginx   
+
+kubectl scale deploy mynginx --replicas=3 
+
+kubectl get deploy,rs,po -l app=mynginx   
+
+kubectl describe deploy mynginx 
+
+kubectl rollout history deploy mynginx
+
+kubectl rollout history deploy mynginx --revision=1

@@ -46,6 +46,7 @@ func lengthOfLongestSubstringx(s string) int {
 	return maxCount
 }
 
+//TBC use sliding window
 func lengthOfLongestSubstring(s string) int {
 	rn := []rune(s)
 	maps := make(map[rune]int)

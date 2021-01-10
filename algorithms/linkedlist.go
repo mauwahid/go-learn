@@ -82,3 +82,5 @@ func (list *LinkedList) AddAfter(nodeProperty int, property int) {
 		nodeWith.nextNode = node
 	}
 }
+
+
